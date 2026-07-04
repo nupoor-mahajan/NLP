@@ -1,0 +1,138 @@
+/* =========================================================
+   Page-specific styles
+   ========================================================= */
+
+/* ---------- Homepage ---------- */
+.desk-hero{
+  position:relative;
+  padding: 50px 0 10px;
+}
+.pin{
+  position:absolute;
+  width:14px;height:14px;
+  border-radius:50%;
+  background: var(--warm-note);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.contrib-glance{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap: 20px;
+  margin-top: 18px;
+}
+.contrib-glance .card h4{ margin:0 0 10px; font-family: var(--sans); color: var(--navy);}
+.contrib-glance .card ul{ margin:0; padding-left: 1.1em; font-size:0.9rem;}
+.contrib-glance .card ul li{ margin-bottom:5px; }
+
+.design-note{
+  background: var(--sticky-yellow);
+  border-radius: var(--radius);
+  padding: 22px 26px;
+  margin: 30px 0;
+  position:relative;
+}
+.design-note::before{
+  content:"📌";
+  position:absolute;
+  top:-14px; left:24px;
+  font-size:1.3rem;
+}
+
+/* ---------- Section divider ---------- */
+.divider{
+  border:none;
+  height:1px;
+  background: repeating-linear-gradient(to right, var(--paper-line) 0 8px, transparent 8px 14px);
+  margin: 40px 0;
+}
+
+/* ---------- About / foundations ---------- */
+.faq-item{
+  border-bottom: 1px solid var(--paper-line);
+  padding: 16px 0;
+}
+.faq-item h3{ margin: 0 0 6px; font-size: 1.05rem; color: var(--navy); }
+.faq-item p{ margin:0; color: var(--ink-soft); font-size:0.95rem; }
+
+/* ---------- Glossary ---------- */
+.glossary-list{ display:grid; gap:14px; }
+.glossary-item{
+  display:grid;
+  grid-template-columns: 190px 1fr;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px dashed var(--paper-line);
+}
+.glossary-item dt{
+  font-weight:700;
+  color: var(--navy);
+  font-family: var(--serif);
+}
+.glossary-item dd{ margin:0; color: var(--ink); }
+@media (max-width: 640px){
+  .glossary-item{ grid-template-columns: 1fr; }
+}
+
+/* ---------- Contribution matrix ---------- */
+.matrix-legend{
+  display:flex; gap:16px; flex-wrap:wrap; margin-bottom: 18px; font-size:0.85rem;
+}
+.matrix-legend span{ display:flex; align-items:center; gap:6px; }
+.legend-dot{ width:10px;height:10px;border-radius:50%; display:inline-block; }
+
+/* ---------- Reflections index ---------- */
+.reflection-cards{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+  gap: 20px;
+}
+
+/* ---------- Mermaid container ---------- */
+.mermaid{
+  display:flex;
+  justify-content:center;
+}
+
+/* ---------- Application page icons ---------- */
+.app-icon-row{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-bottom: 8px;
+}
+.app-icon-row .icon-circle{
+  width:46px;height:46px;
+  border-radius:50%;
+  background: var(--paper-alt);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.4rem;
+  border: 1px solid var(--paper-line);
+}
+
+/* ---------- Sustainability highlight cards ---------- */
+.impact-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 16px;
+  margin: 20px 0 10px;
+}
+.impact-grid .card{ text-align:center; padding: 20px 14px; }
+.impact-grid .card .emoji{ font-size:1.8rem; display:block; margin-bottom:8px; }
+.impact-grid .card h4{ margin:0 0 6px; font-size:0.95rem; }
+.impact-grid .card p{ font-size:0.82rem; color: var(--ink-soft); margin:0; }
+
+/* ---------- Academic integrity checklist ---------- */
+.check-list{ list-style:none; padding:0; }
+.check-list li{
+  padding: 10px 0 10px 30px;
+  position:relative;
+  border-bottom: 1px dashed var(--paper-line);
+}
+.check-list li::before{
+  content:"✔";
+  position:absolute;
+  left:0; top:10px;
+  color: var(--teal);
+  font-weight:700;
+}

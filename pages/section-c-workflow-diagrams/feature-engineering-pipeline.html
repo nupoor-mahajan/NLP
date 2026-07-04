@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feature Engineering Pipeline | NLP Knowledge Artifact Repository</title>
+<meta name="description" content="Clean tokens are still just words - machine learning models need numbers. This pipeline shows how cleaned, tokenized text is converted into numeric fe">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="../../assets/css/components.css">
+<link rel="stylesheet" href="../../assets/css/pages.css">
+
+</head>
+<body>
+<div id="reading-progress"></div>
+
+<header class="site-header">
+  <div class="container navbar">
+    <a class="brand" href="../../index.html">
+      <span class="brand-badge">📘</span>
+      <div class="brand-copy">
+        <span class="brand-title">NLP Notes</span>
+      </div>
+    </a>
+
+    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+
+    <ul class="nav-links">
+      <li><a class="nav-link" data-path="/" href="../../index.html">Home</a></li>
+
+      <li><a class="nav-link" data-path="/pages/about/" href="../../pages/about/index.html">About</a></li>
+
+      <li class="has-dropdown">
+        <a class="nav-link" href="../../pages/section-a-concept-cards/index.html">Repository Sections</a>
+        <div class="dropdown-panel">
+          <a href="../../pages/section-a-concept-cards/index.html">Section A: Concept Cards</a>
+          <a href="../../pages/section-b-comparative-analysis/index.html">Section B: Comparative Analysis</a>
+          <a href="../../pages/section-c-workflow-diagrams/index.html">Section C: Workflow Diagrams</a>
+          <a href="../../pages/section-d-real-world-applications/index.html">Section D: Applications</a>
+          <a href="../../pages/section-e-research-industry-insights/index.html">Section E: Research &amp; Industry</a>
+        </div>
+      </li>
+
+      <li class="has-dropdown">
+        <a class="nav-link" href="../../pages/contribution-matrix/index.html">Student Work</a>
+        <div class="dropdown-panel">
+          <a href="../../pages/contribution-matrix/index.html">Contribution Matrix</a>
+          <a href="../../pages/reflection-notes/index.html">Reflection Notes</a>
+          <a href="../../pages/reflection-notes/nupoor-reflection.html">Nupoor’s Reflection</a>
+          <a href="../../pages/reflection-notes/hansa-reflection.html">Hansa’s Reflection</a>
+        </div>
+      </li>
+
+      <li><a class="nav-link" href="../../pages/sustainability-and-societal-impact/index.html">Sustainability</a></li>
+
+      <li class="has-dropdown">
+        <a class="nav-link" href="../../pages/glossary/index.html">Resources</a>
+        <div class="dropdown-panel">
+          <a href="../../pages/glossary/index.html">Glossary</a>
+          <a href="../../pages/references/index.html">References</a>
+          <a href="../../pages/academic-integrity/ai-usage-declaration.html">AI Usage Declaration</a>
+          <a href="../../pages/academic-integrity/plagiarism-and-originality-note.html">Plagiarism & Originality Note</a>
+        </div>
+      </li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <nav class="breadcrumb"><a href="../../index.html">Home</a><span class="sep">/</span><a href="../../pages/section-c-workflow-diagrams/index.html">Section C</a><span class="sep">/</span><span>Feature Engineering Pipeline</span></nav>
+    
+        <h1>Feature Engineering Pipeline</h1>
+        <div class="author-badge"><span class="dot"></span>Prepared by: Hansa Gusaiwal</div>
+        <p>Clean tokens are still just words - machine learning models need numbers. This pipeline shows how cleaned, tokenized text is converted into numeric features using counting and weighting techniques.</p>
+
+        <div class="callout">
+          <span class="callout-title">Guided intro</span>
+          Once your vegetables are washed and chopped (preprocessed), the next step is turning them into an actual measurable dish - in NLP terms, that means turning words into numbers a model can actually learn from.
+        </div>
+
+        <h2>Workflow Diagram</h2>
+        <div class="diagram-box">
+          <pre class="mermaid">
+graph TD
+    A[Clean Tokenized Text] --> B[Build Vocabulary]
+    B --> C[Bag of Words Counts]
+    B --> D[N-Gram Extraction]
+    C --> E[Term Frequency - TF]
+    E --> F[Inverse Document Frequency - IDF]
+    F --> G[TF-IDF Feature Vectors]
+    D --> G
+          </pre>
+        </div>
+        <h2>Step-by-Step Breakdown</h2>
+        <ol class="step-list">
+          <li><strong>Clean Tokenized Text:</strong> Take the output of the preprocessing pipeline as input.</li>
+<li><strong>Build Vocabulary:</strong> Collect every unique word across the dataset to form the vocabulary.</li>
+<li><strong>Bag of Words Counts:</strong> Count how many times each vocabulary word appears in each document.</li>
+<li><strong>N-Gram Extraction:</strong> Optionally extract sequences of 2 or 3 consecutive words to capture some context.</li>
+<li><strong>Term Frequency (TF):</strong> Normalize word counts within each document by document length.</li>
+<li><strong>Inverse Document Frequency (IDF):</strong> Calculate how rare each word is across the whole corpus.</li>
+<li><strong>TF-IDF Feature Vectors:</strong> Combine TF and IDF to produce the final numeric feature vectors used for modelling.</li>
+        </ol>
+
+        <h2>Why This Pipeline Matters</h2>
+        <p>The quality of features directly decides how well a machine learning model performs. Good feature engineering - like the TF-IDF vectors used in the Amazon reviews sentiment analysis project - often matters just as much as the choice of model itself.</p>
+        
+  
+
+
+<!-- Page Navigation Links -->
+<div class="page-navigation">
+  <a class="nav-btn prev-btn" href="preprocessing-pipeline.html">← Previous: Complete Text Preprocessing Pipeline</a>
+  <a class="nav-btn next-btn" href="text-to-vector-pipeline.html">Next: Text-to-Vector Transformation Process →</a>
+</div>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Repository</h4>
+        <ul>
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../pages/about/index.html">About &amp; Foundations</a></li>
+          <li><a href="../../pages/contribution-matrix/index.html">Contribution Matrix</a></li>
+          <li><a href="../../pages/references/index.html">References</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Sections</h4>
+        <ul>
+          <li><a href="../../pages/section-a-concept-cards/index.html">A. Concept Cards</a></li>
+          <li><a href="../../pages/section-b-comparative-analysis/index.html">B. Comparative Analysis</a></li>
+          <li><a href="../../pages/section-c-workflow-diagrams/index.html">C. Workflow Diagrams</a></li>
+          <li><a href="../../pages/section-d-real-world-applications/index.html">D. Real-World Applications</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>More</h4>
+        <ul>
+          <li><a href="../../pages/section-e-research-industry-insights/index.html">E. Research &amp; Industry</a></li>
+          <li><a href="../../pages/sustainability-and-societal-impact/index.html">Sustainability</a></li>
+          <li><a href="../../pages/glossary/index.html">Glossary</a></li>
+          <li><a href="../../pages/reflection-notes/index.html">Reflection Notes</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Academic Integrity</h4>
+        <ul>
+          <li><a href="../../pages/academic-integrity/ai-usage-declaration.html">AI Usage Declaration</a></li>
+          <li><a href="../../pages/academic-integrity/plagiarism-and-originality-note.html">Plagiarism &amp; Originality</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Nupoor Mahajan &amp; Hansa Gusaiwal - Week 1 NLP Knowledge Artifact Repository</span>
+      <span>Built as a static notebook-style academic submission.</span>
+    </div>
+  </div>
+</footer>
+
+<button id="back-to-top" aria-label="Back to top">&#8593;</button>
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script src="../../assets/js/theme.js"></script>
+<script src="../../assets/js/progress.js"></script>
+<script src="../../assets/js/main.js"></script>
+
+</body>
+</html>

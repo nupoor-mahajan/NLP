@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Statistical Language Models | NLP Knowledge Artifact Repository</title>
+<meta name="description" content="Models that predict the probability of a word sequence using statistics such as word frequencies and N-gram counts.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="../../assets/css/components.css">
+<link rel="stylesheet" href="../../assets/css/pages.css">
+
+</head>
+<body>
+<div id="reading-progress"></div>
+
+<header class="site-header">
+  <div class="container navbar">
+    <a class="brand" href="../../index.html">
+      <span class="brand-badge">📘</span>
+      <div class="brand-copy">
+        <span class="brand-title">NLP Notes</span>
+      </div>
+    </a>
+
+    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+
+    <ul class="nav-links">
+      <li><a class="nav-link" data-path="/" href="../../index.html">Home</a></li>
+
+      <li><a class="nav-link" data-path="/pages/about/" href="../../pages/about/index.html">About</a></li>
+
+      <li class="has-dropdown">
+        <a class="nav-link" href="../../pages/section-a-concept-cards/index.html">Repository Sections</a>
+        <div class="dropdown-panel">
+          <a href="../../pages/section-a-concept-cards/index.html">Section A: Concept Cards</a>
+          <a href="../../pages/section-b-comparative-analysis/index.html">Section B: Comparative Analysis</a>
+          <a href="../../pages/section-c-workflow-diagrams/index.html">Section C: Workflow Diagrams</a>
+          <a href="../../pages/section-d-real-world-applications/index.html">Section D: Applications</a>
+          <a href="../../pages/section-e-research-industry-insights/index.html">Section E: Research &amp; Industry</a>
+        </div>
+      </li>
+
+      <li class="has-dropdown">
+        <a class="nav-link" href="../../pages/contribution-matrix/index.html">Student Work</a>
+        <div class="dropdown-panel">
+          <a href="../../pages/contribution-matrix/index.html">Contribution Matrix</a>
+          <a href="../../pages/reflection-notes/index.html">Reflection Notes</a>
+          <a href="../../pages/reflection-notes/nupoor-reflection.html">Nupoor’s Reflection</a>
+          <a href="../../pages/reflection-notes/hansa-reflection.html">Hansa’s Reflection</a>
+        </div>
+      </li>
+
+      <li><a class="nav-link" href="../../pages/sustainability-and-societal-impact/index.html">Sustainability</a></li>
+
+      <li class="has-dropdown">
+        <a class="nav-link" href="../../pages/glossary/index.html">Resources</a>
+        <div class="dropdown-panel">
+          <a href="../../pages/glossary/index.html">Glossary</a>
+          <a href="../../pages/references/index.html">References</a>
+          <a href="../../pages/academic-integrity/ai-usage-declaration.html">AI Usage Declaration</a>
+          <a href="../../pages/academic-integrity/plagiarism-and-originality-note.html">Plagiarism & Originality Note</a>
+        </div>
+      </li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <nav class="breadcrumb"><a href="../../index.html">Home</a><span class="sep">/</span><a href="../../pages/section-a-concept-cards/index.html">Section A</a><span class="sep">/</span><span>Statistical Language Models</span></nav>
+    
+        <div class="flashcard">
+          <span class="category-badge">Language Models</span>
+          <h1>Statistical Language Models</h1>
+          <p class="summary">Models that predict the probability of a word sequence using statistics such as word frequencies and N-gram counts.</p>
+          <div class="tag-row"><span class="tag-pill">language models</span><span class="tag-pill">probability</span><span class="tag-pill">classic NLP</span></div>
+        </div>
+
+        <div class="author-badge joint"><span class="dot"></span>Prepared jointly by: Nupoor Mahajan &amp; Hansa Gusaiwal</div>
+
+        <div class="subsection-label"><span class="num">1</span> Definition</div>
+        <p>A statistical language model estimates the probability of a sequence of words by using statistics learned from a text corpus, most commonly based on N-gram frequency counts.</p>
+
+        <div class="subsection-label"><span class="num">2</span> Purpose</div>
+        <p>Predicting the next likely word - or judging whether a sentence sounds natural - is useful for tasks like autocomplete, spelling correction, and speech recognition. Statistical models provide a simple, data-driven way to do this without deep learning.</p>
+
+        <div class="subsection-label"><span class="num">3</span> Working Principle</div>
+        <p>An N-gram language model calculates the probability of a word given the previous N-1 words, based on how often that sequence appeared in training data. For example, a bigram model estimates P(word | previous word) using frequency counts from the corpus.</p>
+
+        <div class="subsection-label"><span class="num">4</span> Example</div>
+        <div class="callout example">
+          <span class="callout-title">Worked example</span>
+          If the phrase "good morning" appears very often in training data compared to "good elephant", a bigram model will assign a much higher probability to "morning" following "good" than to "elephant" following "good".
+        </div>
+
+        <div class="subsection-label"><span class="num">5</span> Advantages</div>
+        <ul class="clean-list"><li>Simple, interpretable, and computationally cheap compared to neural models.</li>
+<li>Works reasonably well for tasks with limited vocabulary and predictable patterns.</li>
+<li>Requires far less training data and compute than deep learning approaches.</li></ul>
+
+        <div class="subsection-label"><span class="num">6</span> Limitations</div>
+        <ul class="clean-list"><li>Cannot capture long-range context beyond a few preceding words.</li>
+<li>Suffers from data sparsity - many valid word sequences may never appear in training data.</li>
+<li>Struggles to generalize to creative or unusual sentence structures.</li></ul>
+
+        <div class="subsection-label"><span class="num">7</span> Applications</div>
+        <ul class="clean-list"><li>Basic autocomplete and predictive text keyboards.</li>
+<li>Early speech recognition systems.</li>
+<li>Spelling and grammar suggestion tools.</li></ul>
+        
+  
+
+
+<!-- Page Navigation Links -->
+<div class="page-navigation">
+  <a class="nav-btn prev-btn" href="contextual-embeddings.html">← Previous: Contextual Embeddings</a>
+  <a class="nav-btn next-btn" href="neural-language-models.html">Next: Neural Language Models →</a>
+</div>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Repository</h4>
+        <ul>
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../pages/about/index.html">About &amp; Foundations</a></li>
+          <li><a href="../../pages/contribution-matrix/index.html">Contribution Matrix</a></li>
+          <li><a href="../../pages/references/index.html">References</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Sections</h4>
+        <ul>
+          <li><a href="../../pages/section-a-concept-cards/index.html">A. Concept Cards</a></li>
+          <li><a href="../../pages/section-b-comparative-analysis/index.html">B. Comparative Analysis</a></li>
+          <li><a href="../../pages/section-c-workflow-diagrams/index.html">C. Workflow Diagrams</a></li>
+          <li><a href="../../pages/section-d-real-world-applications/index.html">D. Real-World Applications</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>More</h4>
+        <ul>
+          <li><a href="../../pages/section-e-research-industry-insights/index.html">E. Research &amp; Industry</a></li>
+          <li><a href="../../pages/sustainability-and-societal-impact/index.html">Sustainability</a></li>
+          <li><a href="../../pages/glossary/index.html">Glossary</a></li>
+          <li><a href="../../pages/reflection-notes/index.html">Reflection Notes</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Academic Integrity</h4>
+        <ul>
+          <li><a href="../../pages/academic-integrity/ai-usage-declaration.html">AI Usage Declaration</a></li>
+          <li><a href="../../pages/academic-integrity/plagiarism-and-originality-note.html">Plagiarism &amp; Originality</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Nupoor Mahajan &amp; Hansa Gusaiwal - Week 1 NLP Knowledge Artifact Repository</span>
+      <span>Built as a static notebook-style academic submission.</span>
+    </div>
+  </div>
+</footer>
+
+<button id="back-to-top" aria-label="Back to top">&#8593;</button>
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script src="../../assets/js/theme.js"></script>
+<script src="../../assets/js/progress.js"></script>
+<script src="../../assets/js/main.js"></script>
+
+</body>
+</html>

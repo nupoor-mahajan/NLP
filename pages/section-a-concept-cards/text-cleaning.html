@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text Cleaning | NLP Knowledge Artifact Repository</title>
+<meta name="description" content="The umbrella process that combines normalization, noise removal, and correction steps into one clean-up pipeline.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="../../assets/css/components.css">
+<link rel="stylesheet" href="../../assets/css/pages.css">
+
+</head>
+<body>
+<div id="reading-progress"></div>
+
+<header class="site-header">
+  <div class="container navbar">
+    <a class="brand" href="../../index.html">
+      <span class="brand-badge">📘</span>
+      <div class="brand-copy">
+        <span class="brand-title">NLP Notes</span>
+      </div>
+    </a>
+
+    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+
+    <ul class="nav-links">
+      <li><a class="nav-link" data-path="/" href="../../index.html">Home</a></li>
+
+      <li><a class="nav-link" data-path="/pages/about/" href="../../pages/about/index.html">About</a></li>
+
+      <li class="has-dropdown">
+        <a class="nav-link" href="../../pages/section-a-concept-cards/index.html">Repository Sections</a>
+        <div class="dropdown-panel">
+          <a href="../../pages/section-a-concept-cards/index.html">Section A: Concept Cards</a>
+          <a href="../../pages/section-b-comparative-analysis/index.html">Section B: Comparative Analysis</a>
+          <a href="../../pages/section-c-workflow-diagrams/index.html">Section C: Workflow Diagrams</a>
+          <a href="../../pages/section-d-real-world-applications/index.html">Section D: Applications</a>
+          <a href="../../pages/section-e-research-industry-insights/index.html">Section E: Research &amp; Industry</a>
+        </div>
+      </li>
+
+      <li class="has-dropdown">
+        <a class="nav-link" href="../../pages/contribution-matrix/index.html">Student Work</a>
+        <div class="dropdown-panel">
+          <a href="../../pages/contribution-matrix/index.html">Contribution Matrix</a>
+          <a href="../../pages/reflection-notes/index.html">Reflection Notes</a>
+          <a href="../../pages/reflection-notes/nupoor-reflection.html">Nupoor’s Reflection</a>
+          <a href="../../pages/reflection-notes/hansa-reflection.html">Hansa’s Reflection</a>
+        </div>
+      </li>
+
+      <li><a class="nav-link" href="../../pages/sustainability-and-societal-impact/index.html">Sustainability</a></li>
+
+      <li class="has-dropdown">
+        <a class="nav-link" href="../../pages/glossary/index.html">Resources</a>
+        <div class="dropdown-panel">
+          <a href="../../pages/glossary/index.html">Glossary</a>
+          <a href="../../pages/references/index.html">References</a>
+          <a href="../../pages/academic-integrity/ai-usage-declaration.html">AI Usage Declaration</a>
+          <a href="../../pages/academic-integrity/plagiarism-and-originality-note.html">Plagiarism & Originality Note</a>
+        </div>
+      </li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <nav class="breadcrumb"><a href="../../index.html">Home</a><span class="sep">/</span><a href="../../pages/section-a-concept-cards/index.html">Section A</a><span class="sep">/</span><span>Text Cleaning</span></nav>
+    
+        <div class="flashcard">
+          <span class="category-badge">Text Preprocessing</span>
+          <h1>Text Cleaning</h1>
+          <p class="summary">The umbrella process that combines normalization, noise removal, and correction steps into one clean-up pipeline.</p>
+          <div class="tag-row"><span class="tag-pill">preprocessing</span><span class="tag-pill">pipeline step</span></div>
+        </div>
+
+        <div class="author-badge joint"><span class="dot"></span>Prepared jointly by: Nupoor Mahajan &amp; Hansa Gusaiwal</div>
+
+        <div class="subsection-label"><span class="num">1</span> Definition</div>
+        <p>Text cleaning refers to the overall set of steps - including case normalization, noise removal, punctuation handling, and spelling correction - applied to raw text to prepare it for reliable NLP processing.</p>
+
+        <div class="subsection-label"><span class="num">2</span> Purpose</div>
+        <p>Raw text collected from any real source is messy. A consistent cleaning pipeline ensures that every document entering the system follows the same format, which is essential for fair comparison and accurate feature extraction.</p>
+
+        <div class="subsection-label"><span class="num">3</span> Working Principle</div>
+        <p>Text cleaning typically chains together multiple smaller steps in sequence: lowercasing, removing punctuation and special characters, removing extra whitespace, correcting common typos, and sometimes expanding contractions ("don't" → "do not") before tokenization happens.</p>
+
+        <div class="subsection-label"><span class="num">4</span> Example</div>
+        <div class="callout example">
+          <span class="callout-title">Worked example</span>
+          <b>Raw:</b> "I  LOVED the movie!!!  Its soooo good :) " <br>
+          <b>After cleaning:</b> "i loved the movie its so good" - ready for tokenization and further feature extraction.
+        </div>
+
+        <div class="subsection-label"><span class="num">5</span> Advantages</div>
+        <ul class="clean-list"><li>Creates a standardised, high-quality dataset.</li>
+<li>Improves the reliability of every later NLP step.</li>
+<li>Reduces vocabulary bloat caused by inconsistent formatting.</li></ul>
+
+        <div class="subsection-label"><span class="num">6</span> Limitations</div>
+        <ul class="clean-list"><li>A cleaning pipeline built for one domain may not transfer well to another.</li>
+<li>Excessive cleaning risks losing meaningful signals like emphasis or sentiment cues.</li></ul>
+
+        <div class="subsection-label"><span class="num">7</span> Applications</div>
+        <ul class="clean-list"><li>Preparing customer review datasets for sentiment analysis (as in an Amazon reviews project).</li>
+<li>Cleaning survey or feedback text before analysis.</li>
+<li>Any machine learning pipeline that starts from raw text data.</li></ul>
+        
+  
+
+
+<!-- Page Navigation Links -->
+<div class="page-navigation">
+  <a class="nav-btn prev-btn" href="noise-removal.html">← Previous: Noise Removal</a>
+  <a class="nav-btn next-btn" href="bag-of-words.html">Next: Bag of Words →</a>
+</div>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Repository</h4>
+        <ul>
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../pages/about/index.html">About &amp; Foundations</a></li>
+          <li><a href="../../pages/contribution-matrix/index.html">Contribution Matrix</a></li>
+          <li><a href="../../pages/references/index.html">References</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Sections</h4>
+        <ul>
+          <li><a href="../../pages/section-a-concept-cards/index.html">A. Concept Cards</a></li>
+          <li><a href="../../pages/section-b-comparative-analysis/index.html">B. Comparative Analysis</a></li>
+          <li><a href="../../pages/section-c-workflow-diagrams/index.html">C. Workflow Diagrams</a></li>
+          <li><a href="../../pages/section-d-real-world-applications/index.html">D. Real-World Applications</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>More</h4>
+        <ul>
+          <li><a href="../../pages/section-e-research-industry-insights/index.html">E. Research &amp; Industry</a></li>
+          <li><a href="../../pages/sustainability-and-societal-impact/index.html">Sustainability</a></li>
+          <li><a href="../../pages/glossary/index.html">Glossary</a></li>
+          <li><a href="../../pages/reflection-notes/index.html">Reflection Notes</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Academic Integrity</h4>
+        <ul>
+          <li><a href="../../pages/academic-integrity/ai-usage-declaration.html">AI Usage Declaration</a></li>
+          <li><a href="../../pages/academic-integrity/plagiarism-and-originality-note.html">Plagiarism &amp; Originality</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Nupoor Mahajan &amp; Hansa Gusaiwal - Week 1 NLP Knowledge Artifact Repository</span>
+      <span>Built as a static notebook-style academic submission.</span>
+    </div>
+  </div>
+</footer>
+
+<button id="back-to-top" aria-label="Back to top">&#8593;</button>
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script src="../../assets/js/theme.js"></script>
+<script src="../../assets/js/progress.js"></script>
+<script src="../../assets/js/main.js"></script>
+
+</body>
+</html>

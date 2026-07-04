@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Term Frequency (TF) | NLP Knowledge Artifact Repository</title>
+<meta name="description" content="Measuring how often a term appears within a single document, relative to the document's total word count.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="../../assets/css/components.css">
+<link rel="stylesheet" href="../../assets/css/pages.css">
+
+</head>
+<body>
+<div id="reading-progress"></div>
+
+<header class="site-header">
+  <div class="container navbar">
+    <a class="brand" href="../../index.html">
+      <span class="brand-badge">📘</span>
+      <div class="brand-copy">
+        <span class="brand-title">NLP Notes</span>
+      </div>
+    </a>
+
+    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+
+    <ul class="nav-links">
+      <li><a class="nav-link" data-path="/" href="../../index.html">Home</a></li>
+
+      <li><a class="nav-link" data-path="/pages/about/" href="../../pages/about/index.html">About</a></li>
+
+      <li class="has-dropdown">
+        <a class="nav-link" href="../../pages/section-a-concept-cards/index.html">Repository Sections</a>
+        <div class="dropdown-panel">
+          <a href="../../pages/section-a-concept-cards/index.html">Section A: Concept Cards</a>
+          <a href="../../pages/section-b-comparative-analysis/index.html">Section B: Comparative Analysis</a>
+          <a href="../../pages/section-c-workflow-diagrams/index.html">Section C: Workflow Diagrams</a>
+          <a href="../../pages/section-d-real-world-applications/index.html">Section D: Applications</a>
+          <a href="../../pages/section-e-research-industry-insights/index.html">Section E: Research &amp; Industry</a>
+        </div>
+      </li>
+
+      <li class="has-dropdown">
+        <a class="nav-link" href="../../pages/contribution-matrix/index.html">Student Work</a>
+        <div class="dropdown-panel">
+          <a href="../../pages/contribution-matrix/index.html">Contribution Matrix</a>
+          <a href="../../pages/reflection-notes/index.html">Reflection Notes</a>
+          <a href="../../pages/reflection-notes/nupoor-reflection.html">Nupoor’s Reflection</a>
+          <a href="../../pages/reflection-notes/hansa-reflection.html">Hansa’s Reflection</a>
+        </div>
+      </li>
+
+      <li><a class="nav-link" href="../../pages/sustainability-and-societal-impact/index.html">Sustainability</a></li>
+
+      <li class="has-dropdown">
+        <a class="nav-link" href="../../pages/glossary/index.html">Resources</a>
+        <div class="dropdown-panel">
+          <a href="../../pages/glossary/index.html">Glossary</a>
+          <a href="../../pages/references/index.html">References</a>
+          <a href="../../pages/academic-integrity/ai-usage-declaration.html">AI Usage Declaration</a>
+          <a href="../../pages/academic-integrity/plagiarism-and-originality-note.html">Plagiarism & Originality Note</a>
+        </div>
+      </li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <nav class="breadcrumb"><a href="../../index.html">Home</a><span class="sep">/</span><a href="../../pages/section-a-concept-cards/index.html">Section A</a><span class="sep">/</span><span>Term Frequency (TF)</span></nav>
+    
+        <div class="flashcard">
+          <span class="category-badge">Feature Engineering</span>
+          <h1>Term Frequency (TF)</h1>
+          <p class="summary">Measuring how often a term appears within a single document, relative to the document's total word count.</p>
+          <div class="tag-row"><span class="tag-pill">feature engineering</span><span class="tag-pill">statistics</span><span class="tag-pill">building block for TF-IDF</span></div>
+        </div>
+
+        <div class="author-badge joint"><span class="dot"></span>Prepared jointly by: Nupoor Mahajan &amp; Hansa Gusaiwal</div>
+
+        <div class="subsection-label"><span class="num">1</span> Definition</div>
+        <p>Term Frequency (TF) measures how frequently a specific word appears in a document, usually normalized by the total number of words in that document.</p>
+
+        <div class="subsection-label"><span class="num">2</span> Purpose</div>
+        <p>Simply counting raw word occurrences favours longer documents unfairly. Term Frequency normalizes this count so that word importance can be compared fairly across documents of different lengths.</p>
+
+        <div class="subsection-label"><span class="num">3</span> Working Principle</div>
+        <p>TF for a word w in document d is typically calculated as: TF(w, d) = (number of times w appears in d) / (total number of words in d). A higher TF means the word is relatively more prominent in that specific document.</p>
+
+        <div class="subsection-label"><span class="num">4</span> Example</div>
+        <div class="callout example">
+          <span class="callout-title">Worked example</span>
+          A 100-word product review contains the word "battery" 5 times. <br>
+          TF("battery") = 5 / 100 = 0.05. <br>
+          This tells us "battery" makes up 5% of the words in that review.
+        </div>
+
+        <div class="subsection-label"><span class="num">5</span> Advantages</div>
+        <ul class="clean-list"><li>Simple and intuitive to calculate.</li>
+<li>Normalizes for document length, allowing fair comparison.</li>
+<li>Forms the first half of the widely used TF-IDF technique.</li></ul>
+
+        <div class="subsection-label"><span class="num">6</span> Limitations</div>
+        <ul class="clean-list"><li>Common words (even after stop-word removal) can still dominate TF scores.</li>
+<li>On its own, TF does not consider how unique or rare a word is across the whole dataset.</li></ul>
+
+        <div class="subsection-label"><span class="num">7</span> Applications</div>
+        <ul class="clean-list"><li>Keyword extraction from a single document.</li>
+<li>Building blocks for TF-IDF based search ranking.</li>
+<li>Quick relevance scoring in information retrieval.</li></ul>
+        
+  
+
+
+<!-- Page Navigation Links -->
+<div class="page-navigation">
+  <a class="nav-btn prev-btn" href="ngrams.html">← Previous: N-Grams</a>
+  <a class="nav-btn next-btn" href="idf.html">Next: Inverse Document Frequency (IDF) →</a>
+</div>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Repository</h4>
+        <ul>
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../pages/about/index.html">About &amp; Foundations</a></li>
+          <li><a href="../../pages/contribution-matrix/index.html">Contribution Matrix</a></li>
+          <li><a href="../../pages/references/index.html">References</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Sections</h4>
+        <ul>
+          <li><a href="../../pages/section-a-concept-cards/index.html">A. Concept Cards</a></li>
+          <li><a href="../../pages/section-b-comparative-analysis/index.html">B. Comparative Analysis</a></li>
+          <li><a href="../../pages/section-c-workflow-diagrams/index.html">C. Workflow Diagrams</a></li>
+          <li><a href="../../pages/section-d-real-world-applications/index.html">D. Real-World Applications</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>More</h4>
+        <ul>
+          <li><a href="../../pages/section-e-research-industry-insights/index.html">E. Research &amp; Industry</a></li>
+          <li><a href="../../pages/sustainability-and-societal-impact/index.html">Sustainability</a></li>
+          <li><a href="../../pages/glossary/index.html">Glossary</a></li>
+          <li><a href="../../pages/reflection-notes/index.html">Reflection Notes</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Academic Integrity</h4>
+        <ul>
+          <li><a href="../../pages/academic-integrity/ai-usage-declaration.html">AI Usage Declaration</a></li>
+          <li><a href="../../pages/academic-integrity/plagiarism-and-originality-note.html">Plagiarism &amp; Originality</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Nupoor Mahajan &amp; Hansa Gusaiwal - Week 1 NLP Knowledge Artifact Repository</span>
+      <span>Built as a static notebook-style academic submission.</span>
+    </div>
+  </div>
+</footer>
+
+<button id="back-to-top" aria-label="Back to top">&#8593;</button>
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script src="../../assets/js/theme.js"></script>
+<script src="../../assets/js/progress.js"></script>
+<script src="../../assets/js/main.js"></script>
+
+</body>
+</html>

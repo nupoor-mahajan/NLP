@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Noise Removal | NLP Knowledge Artifact Repository</title>
+<meta name="description" content="Stripping out irrelevant characters like HTML tags, special symbols, and extra whitespace from raw text.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="../../assets/css/components.css">
+<link rel="stylesheet" href="../../assets/css/pages.css">
+
+</head>
+<body>
+<div id="reading-progress"></div>
+
+<header class="site-header">
+  <div class="container navbar">
+    <a class="brand" href="../../index.html">
+      <span class="brand-badge">📘</span>
+      <div class="brand-copy">
+        <span class="brand-title">NLP Notes</span>
+      </div>
+    </a>
+
+    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+
+    <ul class="nav-links">
+      <li><a class="nav-link" data-path="/" href="../../index.html">Home</a></li>
+
+      <li><a class="nav-link" data-path="/pages/about/" href="../../pages/about/index.html">About</a></li>
+
+      <li class="has-dropdown">
+        <a class="nav-link" href="../../pages/section-a-concept-cards/index.html">Repository Sections</a>
+        <div class="dropdown-panel">
+          <a href="../../pages/section-a-concept-cards/index.html">Section A: Concept Cards</a>
+          <a href="../../pages/section-b-comparative-analysis/index.html">Section B: Comparative Analysis</a>
+          <a href="../../pages/section-c-workflow-diagrams/index.html">Section C: Workflow Diagrams</a>
+          <a href="../../pages/section-d-real-world-applications/index.html">Section D: Applications</a>
+          <a href="../../pages/section-e-research-industry-insights/index.html">Section E: Research &amp; Industry</a>
+        </div>
+      </li>
+
+      <li class="has-dropdown">
+        <a class="nav-link" href="../../pages/contribution-matrix/index.html">Student Work</a>
+        <div class="dropdown-panel">
+          <a href="../../pages/contribution-matrix/index.html">Contribution Matrix</a>
+          <a href="../../pages/reflection-notes/index.html">Reflection Notes</a>
+          <a href="../../pages/reflection-notes/nupoor-reflection.html">Nupoor’s Reflection</a>
+          <a href="../../pages/reflection-notes/hansa-reflection.html">Hansa’s Reflection</a>
+        </div>
+      </li>
+
+      <li><a class="nav-link" href="../../pages/sustainability-and-societal-impact/index.html">Sustainability</a></li>
+
+      <li class="has-dropdown">
+        <a class="nav-link" href="../../pages/glossary/index.html">Resources</a>
+        <div class="dropdown-panel">
+          <a href="../../pages/glossary/index.html">Glossary</a>
+          <a href="../../pages/references/index.html">References</a>
+          <a href="../../pages/academic-integrity/ai-usage-declaration.html">AI Usage Declaration</a>
+          <a href="../../pages/academic-integrity/plagiarism-and-originality-note.html">Plagiarism & Originality Note</a>
+        </div>
+      </li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <nav class="breadcrumb"><a href="../../index.html">Home</a><span class="sep">/</span><a href="../../pages/section-a-concept-cards/index.html">Section A</a><span class="sep">/</span><span>Noise Removal</span></nav>
+    
+        <div class="flashcard">
+          <span class="category-badge">Text Preprocessing</span>
+          <h1>Noise Removal</h1>
+          <p class="summary">Stripping out irrelevant characters like HTML tags, special symbols, and extra whitespace from raw text.</p>
+          <div class="tag-row"><span class="tag-pill">preprocessing</span><span class="tag-pill">text cleaning</span></div>
+        </div>
+
+        <div class="author-badge joint"><span class="dot"></span>Prepared jointly by: Nupoor Mahajan &amp; Hansa Gusaiwal</div>
+
+        <div class="subsection-label"><span class="num">1</span> Definition</div>
+        <p>Noise removal is the step of eliminating irrelevant or non-informative elements from text - such as HTML tags, URLs, special characters, emojis (when not needed), and extra whitespace - before further processing.</p>
+
+        <div class="subsection-label"><span class="num">2</span> Purpose</div>
+        <p>Real-world text, especially scraped from websites or social media, is full of clutter that does not carry linguistic meaning. Removing this noise prevents it from confusing the tokenizer or the model.</p>
+
+        <div class="subsection-label"><span class="num">3</span> Working Principle</div>
+        <p>Regular expressions and pattern-matching rules scan the text for known noise patterns (HTML tags like <div>, URLs starting with "http", multiple spaces, non-alphanumeric symbols) and strip or replace them.</p>
+
+        <div class="subsection-label"><span class="num">4</span> Example</div>
+        <div class="callout example">
+          <span class="callout-title">Worked example</span>
+          <b>Raw scraped text:</b> "Great product!!! 😀 Visit <b>https://shop.example.com </b> for more." <br>
+          <b>After noise removal:</b> "Great product Visit for more."
+        </div>
+
+        <div class="subsection-label"><span class="num">5</span> Advantages</div>
+        <ul class="clean-list"><li>Produces much cleaner input for tokenization and feature extraction.</li>
+<li>Reduces the chance of the model learning from meaningless artifacts.</li>
+<li>Essential when working with web-scraped or social media data.</li></ul>
+
+        <div class="subsection-label"><span class="num">6</span> Limitations</div>
+        <ul class="clean-list"><li>Overly aggressive cleaning can remove useful signals, such as emojis that indicate sentiment.</li>
+<li>Rules must be customised per data source, since noise patterns differ across platforms.</li></ul>
+
+        <div class="subsection-label"><span class="num">7</span> Applications</div>
+        <ul class="clean-list"><li>Cleaning product reviews scraped from e-commerce sites.</li>
+<li>Preprocessing tweets or social media comments before sentiment analysis.</li>
+<li>Preparing scanned or OCR-extracted text for analysis.</li></ul>
+        
+  
+
+
+<!-- Page Navigation Links -->
+<div class="page-navigation">
+  <a class="nav-btn prev-btn" href="lemmatization.html">← Previous: Lemmatization</a>
+  <a class="nav-btn next-btn" href="text-cleaning.html">Next: Text Cleaning →</a>
+</div>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Repository</h4>
+        <ul>
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../pages/about/index.html">About &amp; Foundations</a></li>
+          <li><a href="../../pages/contribution-matrix/index.html">Contribution Matrix</a></li>
+          <li><a href="../../pages/references/index.html">References</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Sections</h4>
+        <ul>
+          <li><a href="../../pages/section-a-concept-cards/index.html">A. Concept Cards</a></li>
+          <li><a href="../../pages/section-b-comparative-analysis/index.html">B. Comparative Analysis</a></li>
+          <li><a href="../../pages/section-c-workflow-diagrams/index.html">C. Workflow Diagrams</a></li>
+          <li><a href="../../pages/section-d-real-world-applications/index.html">D. Real-World Applications</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>More</h4>
+        <ul>
+          <li><a href="../../pages/section-e-research-industry-insights/index.html">E. Research &amp; Industry</a></li>
+          <li><a href="../../pages/sustainability-and-societal-impact/index.html">Sustainability</a></li>
+          <li><a href="../../pages/glossary/index.html">Glossary</a></li>
+          <li><a href="../../pages/reflection-notes/index.html">Reflection Notes</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Academic Integrity</h4>
+        <ul>
+          <li><a href="../../pages/academic-integrity/ai-usage-declaration.html">AI Usage Declaration</a></li>
+          <li><a href="../../pages/academic-integrity/plagiarism-and-originality-note.html">Plagiarism &amp; Originality</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Nupoor Mahajan &amp; Hansa Gusaiwal - Week 1 NLP Knowledge Artifact Repository</span>
+      <span>Built as a static notebook-style academic submission.</span>
+    </div>
+  </div>
+</footer>
+
+<button id="back-to-top" aria-label="Back to top">&#8593;</button>
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script src="../../assets/js/theme.js"></script>
+<script src="../../assets/js/progress.js"></script>
+<script src="../../assets/js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+[
+  {
+    "term": "NLP (Natural Language Processing)",
+    "definition": "A field of computer science and artificial intelligence focused on enabling computers to understand, interpret, and generate human language."
+  },
+  {
+    "term": "Corpus",
+    "definition": "A large, structured collection of text used for training or analysing NLP models. Plural: corpora."
+  },
+  {
+    "term": "Token",
+    "definition": "A single unit of text — usually a word, sub-word, or punctuation mark — produced by tokenization."
+  },
+  {
+    "term": "Vocabulary",
+    "definition": "The complete set of unique tokens/words present in a corpus, used as the basis for building feature vectors."
+  },
+  {
+    "term": "Feature",
+    "definition": "A measurable numeric property extracted from text (e.g. a word count or TF-IDF score) that a machine learning model can learn from."
+  },
+  {
+    "term": "Sparse Vector",
+    "definition": "A vector where most values are zero, typically produced by techniques like One-Hot Encoding or Bag of Words."
+  },
+  {
+    "term": "Dense Vector",
+    "definition": "A vector where most or all values are non-zero and meaningful, typically produced by embedding techniques like Word2Vec."
+  },
+  {
+    "term": "Embedding",
+    "definition": "A dense numeric vector representation of a word or piece of text that captures some notion of meaning or context."
+  },
+  {
+    "term": "Language Model",
+    "definition": "A model that estimates the probability of a sequence of words, used for tasks like next-word prediction and text generation."
+  },
+  {
+    "term": "N-gram",
+    "definition": "A contiguous sequence of N words (or characters) extracted from text, used to capture short-range context."
+  },
+  {
+    "term": "TF-IDF",
+    "definition": "A statistic combining Term Frequency and Inverse Document Frequency to measure how important a word is to a document within a larger corpus."
+  },
+  {
+    "term": "Stemming",
+    "definition": "A rule-based process of chopping word endings to reduce a word to an approximate root form."
+  },
+  {
+    "term": "Lemmatization",
+    "definition": "The process of reducing a word to its correct dictionary base form using grammar and vocabulary knowledge."
+  },
+  {
+    "term": "Stop Words",
+    "definition": "Extremely common words (like \"the\", \"is\", \"and\") that are often removed during preprocessing because they carry little topical meaning."
+  },
+  {
+    "term": "Bag of Words",
+    "definition": "A representation of text as an unordered collection of word counts, ignoring grammar and word order."
+  },
+  {
+    "term": "Contextual Embedding",
+    "definition": "A word representation that changes depending on the surrounding sentence, unlike static embeddings that assign one fixed vector per word."
+  },
+  {
+    "term": "Transformer",
+    "definition": "A neural network architecture that uses self-attention to process entire sequences of text at once, forming the basis of models like BERT and GPT."
+  }
+]

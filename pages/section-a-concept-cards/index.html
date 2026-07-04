@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Section A - Concept Cards | NLP Knowledge Artifact Repository</title>
+<meta name="description" content="21 beginner-friendly NLP concept cards covering preprocessing, feature engineering, representation, and language models.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="../../assets/css/components.css">
+<link rel="stylesheet" href="../../assets/css/pages.css">
+
+</head>
+<body>
+<div id="reading-progress"></div>
+
+<header class="site-header">
+  <div class="container navbar">
+    <a class="brand" href="../../index.html">
+      <span class="brand-badge">📘</span>
+      <div class="brand-copy">
+        <span class="brand-title">NLP Notes</span>
+      </div>
+    </a>
+
+    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+
+    <ul class="nav-links">
+      <li><a class="nav-link" data-path="/" href="../../index.html">Home</a></li>
+
+      <li><a class="nav-link" data-path="/pages/about/" href="../../pages/about/index.html">About</a></li>
+
+      <li class="has-dropdown">
+        <a class="nav-link" href="../../pages/section-a-concept-cards/index.html">Repository Sections</a>
+        <div class="dropdown-panel">
+          <a href="../../pages/section-a-concept-cards/index.html">Section A: Concept Cards</a>
+          <a href="../../pages/section-b-comparative-analysis/index.html">Section B: Comparative Analysis</a>
+          <a href="../../pages/section-c-workflow-diagrams/index.html">Section C: Workflow Diagrams</a>
+          <a href="../../pages/section-d-real-world-applications/index.html">Section D: Applications</a>
+          <a href="../../pages/section-e-research-industry-insights/index.html">Section E: Research &amp; Industry</a>
+        </div>
+      </li>
+
+      <li class="has-dropdown">
+        <a class="nav-link" href="../../pages/contribution-matrix/index.html">Student Work</a>
+        <div class="dropdown-panel">
+          <a href="../../pages/contribution-matrix/index.html">Contribution Matrix</a>
+          <a href="../../pages/reflection-notes/index.html">Reflection Notes</a>
+          <a href="../../pages/reflection-notes/nupoor-reflection.html">Nupoor’s Reflection</a>
+          <a href="../../pages/reflection-notes/hansa-reflection.html">Hansa’s Reflection</a>
+        </div>
+      </li>
+
+      <li><a class="nav-link" href="../../pages/sustainability-and-societal-impact/index.html">Sustainability</a></li>
+
+      <li class="has-dropdown">
+        <a class="nav-link" href="../../pages/glossary/index.html">Resources</a>
+        <div class="dropdown-panel">
+          <a href="../../pages/glossary/index.html">Glossary</a>
+          <a href="../../pages/references/index.html">References</a>
+          <a href="../../pages/academic-integrity/ai-usage-declaration.html">AI Usage Declaration</a>
+          <a href="../../pages/academic-integrity/plagiarism-and-originality-note.html">Plagiarism & Originality Note</a>
+        </div>
+      </li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <nav class="breadcrumb"><a href="../../index.html">Home</a><span class="sep">/</span><span>Section A: Concept Cards</span></nav>
+    
+    <h1>Section A: Concept Cards</h1>
+    <div class="author-badge joint"><span class="dot"></span>Prepared jointly by: Nupoor Mahajan &amp; Hansa Gusaiwal</div>
+    <p>This section documents 21 core Week 1 NLP concepts, grouped into four categories: Text Preprocessing, Feature Engineering, Language Representation, and Language Models. Each concept has its own dedicated page covering its definition, purpose, working principle, a worked example, advantages, limitations, and applications.</p>
+
+    <div class="filter-bar">
+      <input type="text" id="concept-search" placeholder="Search concepts (e.g. tokenization)...">
+    </div>
+    <div class="filter-bar">
+      <button class="filter-chip active" data-category="all">All</button><button class="filter-chip" data-category="Text Preprocessing">Text Preprocessing</button><button class="filter-chip" data-category="Feature Engineering">Feature Engineering</button><button class="filter-chip" data-category="Language Representation">Language Representation</button><button class="filter-chip" data-category="Language Models">Language Models</button>
+    </div>
+
+    <div class="card-grid">
+      <div class="concept-card-wrap" data-title="Sentence Segmentation" data-category="Text Preprocessing"><a class="card link-card concept-card" href="sentence-segmentation.html"><span class="cat">Text Preprocessing</span><h3>Sentence Segmentation</h3><p>Splitting a block of raw text into individual sentences before any deeper analysis begins.</p></a></div>
+<div class="concept-card-wrap" data-title="Tokenization" data-category="Text Preprocessing"><a class="card link-card concept-card" href="tokenization.html"><span class="cat">Text Preprocessing</span><h3>Tokenization</h3><p>Breaking text into smaller pieces called tokens - usually words or sub-words - so a machine can work with them.</p></a></div>
+<div class="concept-card-wrap" data-title="Case Normalization" data-category="Text Preprocessing"><a class="card link-card concept-card" href="case-normalization.html"><span class="cat">Text Preprocessing</span><h3>Case Normalization</h3><p>Converting all text to a single letter case, usually lowercase, so the same word is not treated as different words.</p></a></div>
+<div class="concept-card-wrap" data-title="Stop-word Removal" data-category="Text Preprocessing"><a class="card link-card concept-card" href="stopword-removal.html"><span class="cat">Text Preprocessing</span><h3>Stop-word Removal</h3><p>Removing extremely common words like "is", "the", and "and" that add little meaning to text analysis.</p></a></div>
+<div class="concept-card-wrap" data-title="Stemming" data-category="Text Preprocessing"><a class="card link-card concept-card" href="stemming.html"><span class="cat">Text Preprocessing</span><h3>Stemming</h3><p>Chopping words down to a rough root form using simple rules, even if the result isn't a real dictionary word.</p></a></div>
+<div class="concept-card-wrap" data-title="Lemmatization" data-category="Text Preprocessing"><a class="card link-card concept-card" href="lemmatization.html"><span class="cat">Text Preprocessing</span><h3>Lemmatization</h3><p>Reducing a word to its correct dictionary base form (lemma) using grammar and vocabulary knowledge, unlike stemming.</p></a></div>
+<div class="concept-card-wrap" data-title="Noise Removal" data-category="Text Preprocessing"><a class="card link-card concept-card" href="noise-removal.html"><span class="cat">Text Preprocessing</span><h3>Noise Removal</h3><p>Stripping out irrelevant characters like HTML tags, special symbols, and extra whitespace from raw text.</p></a></div>
+<div class="concept-card-wrap" data-title="Text Cleaning" data-category="Text Preprocessing"><a class="card link-card concept-card" href="text-cleaning.html"><span class="cat">Text Preprocessing</span><h3>Text Cleaning</h3><p>The umbrella process that combines normalization, noise removal, and correction steps into one clean-up pipeline.</p></a></div>
+<div class="concept-card-wrap" data-title="Bag of Words" data-category="Feature Engineering"><a class="card link-card concept-card" href="bag-of-words.html"><span class="cat">Feature Engineering</span><h3>Bag of Words</h3><p>Representing a document as an unordered collection of word counts, ignoring grammar and word order completely.</p></a></div>
+<div class="concept-card-wrap" data-title="N-Grams" data-category="Feature Engineering"><a class="card link-card concept-card" href="ngrams.html"><span class="cat">Feature Engineering</span><h3>N-Grams</h3><p>Grouping consecutive sequences of N words or characters together to capture some local word order.</p></a></div>
+<div class="concept-card-wrap" data-title="Term Frequency (TF)" data-category="Feature Engineering"><a class="card link-card concept-card" href="tf.html"><span class="cat">Feature Engineering</span><h3>Term Frequency (TF)</h3><p>Measuring how often a term appears within a single document, relative to the document's total word count.</p></a></div>
+<div class="concept-card-wrap" data-title="Inverse Document Frequency (IDF)" data-category="Feature Engineering"><a class="card link-card concept-card" href="idf.html"><span class="cat">Feature Engineering</span><h3>Inverse Document Frequency (IDF)</h3><p>Measuring how rare or common a term is across an entire collection of documents, to down-weight overly common words.</p></a></div>
+<div class="concept-card-wrap" data-title="TF-IDF" data-category="Feature Engineering"><a class="card link-card concept-card" href="tfidf.html"><span class="cat">Feature Engineering</span><h3>TF-IDF</h3><p>Combining Term Frequency and Inverse Document Frequency into one score that highlights words that are both frequent locally and rare globally.</p></a></div>
+<div class="concept-card-wrap" data-title="One-Hot Encoding" data-category="Language Representation"><a class="card link-card concept-card" href="one-hot-encoding.html"><span class="cat">Language Representation</span><h3>One-Hot Encoding</h3><p>Representing each word as a vector with a single '1' at its position in the vocabulary and '0' everywhere else.</p></a></div>
+<div class="concept-card-wrap" data-title="Word Embeddings" data-category="Language Representation"><a class="card link-card concept-card" href="word-embeddings.html"><span class="cat">Language Representation</span><h3>Word Embeddings</h3><p>Representing words as dense numeric vectors so that similar words end up close together in the vector space.</p></a></div>
+<div class="concept-card-wrap" data-title="Word2Vec" data-category="Language Representation"><a class="card link-card concept-card" href="word2vec.html"><span class="cat">Language Representation</span><h3>Word2Vec</h3><p>A pioneering neural network method (by Google, 2013) that learns word embeddings using two training strategies: CBOW and Skip-gram.</p></a></div>
+<div class="concept-card-wrap" data-title="FastText" data-category="Language Representation"><a class="card link-card concept-card" href="fasttext.html"><span class="cat">Language Representation</span><h3>FastText</h3><p>An embedding method by Facebook AI that represents words as collections of character n-grams, handling rare and unseen words better than Word2Vec.</p></a></div>
+<div class="concept-card-wrap" data-title="Contextual Embeddings" data-category="Language Representation"><a class="card link-card concept-card" href="contextual-embeddings.html"><span class="cat">Language Representation</span><h3>Contextual Embeddings</h3><p>Embeddings that change based on surrounding words, so the same word gets a different vector depending on its meaning in context.</p></a></div>
+<div class="concept-card-wrap" data-title="Statistical Language Models" data-category="Language Models"><a class="card link-card concept-card" href="statistical-language-models.html"><span class="cat">Language Models</span><h3>Statistical Language Models</h3><p>Models that predict the probability of a word sequence using statistics such as word frequencies and N-gram counts.</p></a></div>
+<div class="concept-card-wrap" data-title="Neural Language Models" data-category="Language Models"><a class="card link-card concept-card" href="neural-language-models.html"><span class="cat">Language Models</span><h3>Neural Language Models</h3><p>Language models built using neural networks (like RNNs and LSTMs) that learn word probabilities through training rather than raw counting.</p></a></div>
+<div class="concept-card-wrap" data-title="Transformer-based Representations" data-category="Language Models"><a class="card link-card concept-card" href="transformer-based-representations.html"><span class="cat">Language Models</span><h3>Transformer-based Representations</h3><p>Modern architecture (used in BERT, GPT) that processes entire sentences at once using an "attention" mechanism to weigh word relationships.</p></a></div>
+    </div>
+    
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Repository</h4>
+        <ul>
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../pages/about/index.html">About &amp; Foundations</a></li>
+          <li><a href="../../pages/contribution-matrix/index.html">Contribution Matrix</a></li>
+          <li><a href="../../pages/references/index.html">References</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Sections</h4>
+        <ul>
+          <li><a href="../../pages/section-a-concept-cards/index.html">A. Concept Cards</a></li>
+          <li><a href="../../pages/section-b-comparative-analysis/index.html">B. Comparative Analysis</a></li>
+          <li><a href="../../pages/section-c-workflow-diagrams/index.html">C. Workflow Diagrams</a></li>
+          <li><a href="../../pages/section-d-real-world-applications/index.html">D. Real-World Applications</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>More</h4>
+        <ul>
+          <li><a href="../../pages/section-e-research-industry-insights/index.html">E. Research &amp; Industry</a></li>
+          <li><a href="../../pages/sustainability-and-societal-impact/index.html">Sustainability</a></li>
+          <li><a href="../../pages/glossary/index.html">Glossary</a></li>
+          <li><a href="../../pages/reflection-notes/index.html">Reflection Notes</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Academic Integrity</h4>
+        <ul>
+          <li><a href="../../pages/academic-integrity/ai-usage-declaration.html">AI Usage Declaration</a></li>
+          <li><a href="../../pages/academic-integrity/plagiarism-and-originality-note.html">Plagiarism &amp; Originality</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Nupoor Mahajan &amp; Hansa Gusaiwal - Week 1 NLP Knowledge Artifact Repository</span>
+      <span>Built as a static notebook-style academic submission.</span>
+    </div>
+  </div>
+</footer>
+
+<button id="back-to-top" aria-label="Back to top">&#8593;</button>
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script src="../../assets/js/theme.js"></script>
+<script src="../../assets/js/progress.js"></script>
+<script src="../../assets/js/main.js"></script>
+<script src="../../assets/js/search.js"></script>
+</body>
+</html>

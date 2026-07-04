@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>N-Grams | NLP Knowledge Artifact Repository</title>
+<meta name="description" content="Grouping consecutive sequences of N words or characters together to capture some local word order.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/style.css">
+<link rel="stylesheet" href="../../assets/css/components.css">
+<link rel="stylesheet" href="../../assets/css/pages.css">
+
+</head>
+<body>
+<div id="reading-progress"></div>
+
+<header class="site-header">
+  <div class="container navbar">
+    <a class="brand" href="../../index.html">
+      <span class="brand-badge">📘</span>
+      <div class="brand-copy">
+        <span class="brand-title">NLP Notes</span>
+      </div>
+    </a>
+
+    <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+
+    <ul class="nav-links">
+      <li><a class="nav-link" data-path="/" href="../../index.html">Home</a></li>
+
+      <li><a class="nav-link" data-path="/pages/about/" href="../../pages/about/index.html">About</a></li>
+
+      <li class="has-dropdown">
+        <a class="nav-link" href="../../pages/section-a-concept-cards/index.html">Repository Sections</a>
+        <div class="dropdown-panel">
+          <a href="../../pages/section-a-concept-cards/index.html">Section A: Concept Cards</a>
+          <a href="../../pages/section-b-comparative-analysis/index.html">Section B: Comparative Analysis</a>
+          <a href="../../pages/section-c-workflow-diagrams/index.html">Section C: Workflow Diagrams</a>
+          <a href="../../pages/section-d-real-world-applications/index.html">Section D: Applications</a>
+          <a href="../../pages/section-e-research-industry-insights/index.html">Section E: Research &amp; Industry</a>
+        </div>
+      </li>
+
+      <li class="has-dropdown">
+        <a class="nav-link" href="../../pages/contribution-matrix/index.html">Student Work</a>
+        <div class="dropdown-panel">
+          <a href="../../pages/contribution-matrix/index.html">Contribution Matrix</a>
+          <a href="../../pages/reflection-notes/index.html">Reflection Notes</a>
+          <a href="../../pages/reflection-notes/nupoor-reflection.html">Nupoor’s Reflection</a>
+          <a href="../../pages/reflection-notes/hansa-reflection.html">Hansa’s Reflection</a>
+        </div>
+      </li>
+
+      <li><a class="nav-link" href="../../pages/sustainability-and-societal-impact/index.html">Sustainability</a></li>
+
+      <li class="has-dropdown">
+        <a class="nav-link" href="../../pages/glossary/index.html">Resources</a>
+        <div class="dropdown-panel">
+          <a href="../../pages/glossary/index.html">Glossary</a>
+          <a href="../../pages/references/index.html">References</a>
+          <a href="../../pages/academic-integrity/ai-usage-declaration.html">AI Usage Declaration</a>
+          <a href="../../pages/academic-integrity/plagiarism-and-originality-note.html">Plagiarism & Originality Note</a>
+        </div>
+      </li>
+    </ul>
+
+    <div class="nav-actions">
+      <button class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <nav class="breadcrumb"><a href="../../index.html">Home</a><span class="sep">/</span><a href="../../pages/section-a-concept-cards/index.html">Section A</a><span class="sep">/</span><span>N-Grams</span></nav>
+    
+        <div class="flashcard">
+          <span class="category-badge">Feature Engineering</span>
+          <h1>N-Grams</h1>
+          <p class="summary">Grouping consecutive sequences of N words or characters together to capture some local word order.</p>
+          <div class="tag-row"><span class="tag-pill">feature engineering</span><span class="tag-pill">context capture</span></div>
+        </div>
+
+        <div class="author-badge joint"><span class="dot"></span>Prepared jointly by: Nupoor Mahajan &amp; Hansa Gusaiwal</div>
+
+        <div class="subsection-label"><span class="num">1</span> Definition</div>
+        <p>An N-gram is a contiguous sequence of N items - usually words - taken from a piece of text. When N=1 it is called a unigram, N=2 a bigram, N=3 a trigram, and so on.</p>
+
+        <div class="subsection-label"><span class="num">2</span> Purpose</div>
+        <p>Plain Bag of Words loses all information about word order. N-grams partially recover this by capturing short sequences of words that often carry more meaning together than individually - such as "not good" versus "good" alone.</p>
+
+        <div class="subsection-label"><span class="num">3</span> Working Principle</div>
+        <p>A sliding window of size N moves across the tokenized text, and each window of N consecutive words becomes one feature. These N-gram features can then be counted, just like in Bag of Words, to build a feature vector.</p>
+
+        <div class="subsection-label"><span class="num">4</span> Example</div>
+        <div class="callout example">
+          <span class="callout-title">Worked example</span>
+          <b>Sentence:</b> "the food was not good". <br>
+          <b>Bigrams (N=2):</b> ["the food", "food was", "was not", "not good"]. <br>
+          Notice that "not good" is now captured as a single feature.
+        </div>
+
+        <div class="subsection-label"><span class="num">5</span> Advantages</div>
+        <ul class="clean-list"><li>Captures short-range word order and context that unigrams miss.</li>
+<li>Helps distinguish phrases with opposite meaning, like "not good" versus "good".</li>
+<li>Easy to combine with Bag of Words or TF-IDF.</li></ul>
+
+        <div class="subsection-label"><span class="num">6</span> Limitations</div>
+        <ul class="clean-list"><li>Feature space grows very quickly as N increases, leading to sparsity.</li>
+<li>Still cannot capture long-range dependencies across a whole sentence.</li>
+<li>Rare N-grams may not generalise well to unseen text.</li></ul>
+
+        <div class="subsection-label"><span class="num">7</span> Applications</div>
+        <ul class="clean-list"><li>Sentiment analysis where phrase-level context matters.</li>
+<li>Autocomplete and predictive text keyboards.</li>
+<li>Spelling and grammar correction tools.</li></ul>
+        
+  
+
+
+<!-- Page Navigation Links -->
+<div class="page-navigation">
+  <a class="nav-btn prev-btn" href="bag-of-words.html">← Previous: Bag of Words</a>
+  <a class="nav-btn next-btn" href="tf.html">Next: Term Frequency (TF) →</a>
+</div>
+</div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Repository</h4>
+        <ul>
+          <li><a href="../../index.html">Home</a></li>
+          <li><a href="../../pages/about/index.html">About &amp; Foundations</a></li>
+          <li><a href="../../pages/contribution-matrix/index.html">Contribution Matrix</a></li>
+          <li><a href="../../pages/references/index.html">References</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Sections</h4>
+        <ul>
+          <li><a href="../../pages/section-a-concept-cards/index.html">A. Concept Cards</a></li>
+          <li><a href="../../pages/section-b-comparative-analysis/index.html">B. Comparative Analysis</a></li>
+          <li><a href="../../pages/section-c-workflow-diagrams/index.html">C. Workflow Diagrams</a></li>
+          <li><a href="../../pages/section-d-real-world-applications/index.html">D. Real-World Applications</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>More</h4>
+        <ul>
+          <li><a href="../../pages/section-e-research-industry-insights/index.html">E. Research &amp; Industry</a></li>
+          <li><a href="../../pages/sustainability-and-societal-impact/index.html">Sustainability</a></li>
+          <li><a href="../../pages/glossary/index.html">Glossary</a></li>
+          <li><a href="../../pages/reflection-notes/index.html">Reflection Notes</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Academic Integrity</h4>
+        <ul>
+          <li><a href="../../pages/academic-integrity/ai-usage-declaration.html">AI Usage Declaration</a></li>
+          <li><a href="../../pages/academic-integrity/plagiarism-and-originality-note.html">Plagiarism &amp; Originality</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Nupoor Mahajan &amp; Hansa Gusaiwal - Week 1 NLP Knowledge Artifact Repository</span>
+      <span>Built as a static notebook-style academic submission.</span>
+    </div>
+  </div>
+</footer>
+
+<button id="back-to-top" aria-label="Back to top">&#8593;</button>
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script src="../../assets/js/theme.js"></script>
+<script src="../../assets/js/progress.js"></script>
+<script src="../../assets/js/main.js"></script>
+
+</body>
+</html>

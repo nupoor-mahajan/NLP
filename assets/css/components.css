@@ -1,0 +1,306 @@
+/* =========================================================
+   Component styles - cards, badges, callouts, tables
+   ========================================================= */
+
+/* ---------- Paper card ---------- */
+.card{
+  background: var(--paper);
+  border: 1px solid var(--paper-line);
+  border-radius: var(--radius);
+  box-shadow: var(--card-shadow);
+  padding: 22px;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.card:hover{ transform: translateY(-4px); box-shadow: var(--card-shadow-hover); }
+
+.card-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px,1fr));
+  gap: 20px;
+}
+
+.link-card{
+  display:block;
+  color: inherit;
+}
+.link-card:hover{ text-decoration:none; }
+
+/* ---------- Section link card (homepage) ---------- */
+.section-card{
+  position:relative;
+  overflow:hidden;
+  border-left: 5px solid var(--navy);
+}
+.section-card .emoji{ font-size:1.8rem; }
+.section-card h3{ margin-top: 0.4em; margin-bottom:0.3em; font-size:1.15rem; }
+.section-card p{ font-size:0.92rem; color: var(--ink-soft); margin-bottom:0; }
+
+/* ---------- Badges ---------- */
+.badge{
+  display:inline-block;
+  padding: 4px 11px;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight:700;
+  letter-spacing:0.03em;
+  text-transform: uppercase;
+}
+.badge-navy{ background: var(--navy); color:#fff; }
+.badge-teal{ background: var(--teal); color:#fff; }
+.badge-warm{ background: var(--warm-note); color:#fff; }
+.badge-outline{ background:transparent; border:1px solid var(--navy); color: var(--navy); }
+
+/* ---------- Author badge ---------- */
+.author-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background: var(--paper-alt);
+  border: 1px dashed var(--dusty-blue);
+  border-radius: 10px;
+  padding: 8px 14px;
+  font-size: 0.86rem;
+  font-weight:600;
+  color: var(--ink);
+  margin-bottom: 20px;
+}
+.author-badge .dot{
+  width:8px;height:8px;border-radius:50%;
+  background: var(--navy);
+  display:inline-block;
+}
+.author-badge.joint .dot{ background: var(--teal); }
+
+/* ---------- Callout / sticky notes ---------- */
+.callout{
+  border-radius: 10px;
+  padding: 16px 18px;
+  margin: 20px 0;
+  border-left: 5px solid var(--navy);
+  background: var(--paper-alt);
+  font-size: 0.95rem;
+}
+.callout strong{ color: var(--navy); }
+.callout.tip{ border-left-color: var(--teal); background: var(--sticky-green); }
+.callout.example{ border-left-color: var(--warm-note); background: var(--sticky-yellow); }
+.callout.note{ border-left-color: var(--dusty-blue); background: var(--sticky-pink); }
+.callout .callout-title{
+  font-family: var(--hand);
+  font-size: 1.25rem;
+  display:block;
+  margin-bottom: 4px;
+  color: var(--ink);
+}
+
+/* ---------- Flashcard summary block (concept pages) ---------- */
+.flashcard{
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-deep) 100%);
+  color: #f4efe0;
+  border-radius: var(--radius);
+  padding: 26px 28px;
+  margin-bottom: 30px;
+  box-shadow: var(--card-shadow);
+}
+.flashcard .category-badge{
+  display:inline-block;
+  background: rgba(255,255,255,0.15);
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 10px;
+}
+.flashcard h1{ color:#fff; margin-bottom: 8px; }
+.flashcard .summary{ font-size: 1.02rem; opacity:0.92; margin-bottom: 14px; }
+.tag-row{ display:flex; flex-wrap:wrap; gap:8px; }
+.tag-pill{
+  background: rgba(255,255,255,0.14);
+  border: 1px solid rgba(255,255,255,0.25);
+  padding: 4px 11px;
+  border-radius: 999px;
+  font-size: 0.76rem;
+}
+
+/* ---------- Article sub-sections ---------- */
+.subsection-label{
+  font-family: var(--hand);
+  font-size: 1.5rem;
+  color: var(--navy);
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-top: 1.8em;
+  margin-bottom: 0.3em;
+}
+.subsection-label .num{
+  width:30px;height:30px;
+  border-radius:50%;
+  background: var(--navy);
+  color:#fff;
+  font-family: var(--sans);
+  font-size:0.85rem;
+  font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+}
+
+ul.clean-list{ padding-left: 1.2em; }
+ul.clean-list li{ margin-bottom: 0.4em; }
+
+/* ---------- Tables ---------- */
+.table-wrap{ overflow-x:auto; margin: 20px 0; }
+table.notebook-table{
+  width:100%;
+  border-collapse: collapse;
+  background: var(--paper);
+  border-radius: 10px;
+  overflow:hidden;
+  font-size: 0.92rem;
+}
+table.notebook-table th{
+  background: var(--navy);
+  color:#fff;
+  text-align:left;
+  padding: 12px 14px;
+  font-family: var(--sans);
+  font-weight:600;
+}
+table.notebook-table td{
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--paper-line);
+  vertical-align: top;
+}
+table.notebook-table tr:nth-child(even) td{ background: var(--paper-alt); }
+
+/* ---------- Buttons ---------- */
+.btn{
+  display:inline-block;
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: var(--navy);
+  color:#fff !important;
+  font-weight:600;
+  font-size:0.9rem;
+  border: none;
+  cursor:pointer;
+}
+.btn:hover{ background: var(--navy-deep); text-decoration:none; }
+.btn-outline{
+  background:transparent;
+  color: var(--navy) !important;
+  border: 1.5px solid var(--navy);
+}
+.btn-outline:hover{ background: var(--paper-alt); }
+
+/* ---------- Hero ---------- */
+.hero{
+  padding: 56px 0 20px;
+  text-align:center;
+}
+.hero .eyebrow{
+  font-family: var(--hand);
+  font-size: 1.5rem;
+  color: var(--warm-note);
+}
+.hero h1{ font-size: 2.6rem; }
+.hero p.lead{ font-size: 1.1rem; color: var(--ink-soft); max-width: 640px; margin: 0 auto 22px; }
+.team-row{ display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-bottom: 26px;}
+.team-chip{
+  background: var(--paper-alt);
+  border:1px solid var(--paper-line);
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-weight:600;
+  font-size:0.9rem;
+}
+
+/* ---------- Concept filter bar ---------- */
+.filter-bar{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-bottom: 26px;
+  align-items:center;
+}
+.filter-bar input[type="text"]{
+  flex:1;
+  min-width:200px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--paper-line);
+  background: var(--paper);
+  color: var(--ink);
+  font-size:0.92rem;
+}
+.filter-chip{
+  padding: 7px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--paper-line);
+  background: var(--paper);
+  color: var(--ink);
+  cursor:pointer;
+  font-size:0.85rem;
+  font-weight:600;
+}
+.filter-chip.active{ background: var(--navy); color:#fff; border-color: var(--navy); }
+
+/* ---------- Concept card (Section A) ---------- */
+.concept-card{
+  border-top: 4px solid var(--navy);
+}
+.concept-card .cat{ font-size:0.72rem; text-transform:uppercase; letter-spacing:0.05em; color: var(--teal); font-weight:700; }
+.concept-card h3{ margin: 6px 0 6px; font-size: 1.08rem; }
+.concept-card p{ font-size: 0.88rem; color: var(--ink-soft); }
+
+/* ---------- Diagram box ---------- */
+.diagram-box{
+  background: var(--paper);
+  border: 1px solid var(--paper-line);
+  border-radius: var(--radius);
+  padding: 20px;
+  margin: 20px 0;
+  overflow-x: auto;
+}
+
+/* ---------- Step list ---------- */
+.step-list{ counter-reset: step; list-style:none; padding:0; }
+.step-list li{
+  counter-increment: step;
+  position:relative;
+  padding: 14px 14px 14px 52px;
+  margin-bottom: 12px;
+  background: var(--paper-alt);
+  border-radius: 10px;
+}
+.step-list li::before{
+  content: counter(step);
+  position:absolute;
+  left:14px; top:50%; transform:translateY(-50%);
+  width:26px;height:26px;
+  background: var(--navy);
+  color:#fff;
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:0.82rem; font-weight:700;
+}
+
+/* ---------- Reflection quote block ---------- */
+.reflection-block{
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  line-height:1.8;
+}
+.reflection-block .signoff{
+  margin-top: 24px;
+  font-family: var(--hand);
+  font-size: 1.4rem;
+  color: var(--navy);
+}
+
+/* ---------- Highlight term ---------- */
+mark.term{
+  background: var(--sticky-yellow);
+  color: var(--ink);
+  padding: 1px 5px;
+  border-radius: 4px;
+}
