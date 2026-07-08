@@ -92,6 +92,81 @@
   color: var(--ink);
 }
 
+/* ---------- Expandable application spotlight ---------- */
+.spotlight-card{
+  margin-top: 8px;
+  margin-bottom: 24px;
+  border: 1px solid var(--paper-line);
+  border-radius: 18px;
+  background: linear-gradient(135deg, var(--paper) 0%, var(--paper-alt) 100%);
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+}
+.spotlight-toggle{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 22px;
+  border: none;
+  background: transparent;
+  color: var(--ink);
+  text-align: left;
+  cursor: pointer;
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 700;
+}
+.spotlight-toggle:hover{ background: rgba(31, 58, 95, 0.05); }
+.spotlight-heading{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--hand);
+  font-size: 1.25rem;
+  letter-spacing: 0.01em;
+  color: var(--navy);
+}
+.spotlight-icon{ font-size: 1.2rem; }
+.spotlight-toggler{
+  font-size: 1.3rem;
+  line-height: 1;
+  color: var(--navy);
+  transition: transform 0.25s ease;
+}
+.spotlight-card.is-open .spotlight-toggler{ transform: rotate(45deg); }
+.spotlight-panel{
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  padding: 0 22px;
+  transition: max-height 0.35s ease, opacity 0.35s ease, padding 0.35s ease;
+}
+.spotlight-card.is-open .spotlight-panel{
+  max-height: 420px;
+  opacity: 1;
+  padding: 0 22px 20px;
+}
+.spotlight-panel p{
+  margin: 0 0 10px;
+  color: var(--ink-soft);
+  line-height: 1.7;
+}
+.spotlight-list{
+  margin: 10px 0 0;
+  padding-left: 1.1rem;
+  color: var(--ink-soft);
+}
+.spotlight-list li{ margin-bottom: 8px; }
+.spotlight-list strong{ color: var(--navy); }
+
+@media (max-width: 600px){
+  .spotlight-toggle{ padding: 16px 18px; font-size: 0.95rem; }
+  .spotlight-panel{ padding: 0 18px; }
+  .spotlight-card.is-open .spotlight-panel{ padding: 0 18px 18px; }
+}
+
 /* ---------- Flashcard summary block (concept pages) ---------- */
 .flashcard{
   background: linear-gradient(135deg, var(--navy) 0%, var(--navy-deep) 100%);

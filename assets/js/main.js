@@ -33,6 +33,16 @@
       }
     });
 
+    // Expandable application spotlight
+    document.querySelectorAll(".spotlight-toggle").forEach(function (button) {
+      button.addEventListener("click", function () {
+        const card = button.closest(".spotlight-card");
+        if (!card) return;
+        const isOpen = card.classList.toggle("is-open");
+        button.setAttribute("aria-expanded", String(isOpen));
+      });
+    });
+
     // Mermaid diagrams
     if (window.mermaid) {
       const isDark = document.documentElement.getAttribute("data-theme") === "dark";
